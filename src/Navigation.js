@@ -22,6 +22,7 @@ import AddProducts from "./components/layout/Products/AddProducts";
 import EditProducts from "./components/layout/Products/EditProducts";
 import Orders from "./components/layout/Orders";
 import TurfBooking from "./components/layout/TurfBooking";
+import ViewFeedback from "./components/Feedbacks/ViewFeedback";
 
 export const AdminNavigation = () => {
   return (
@@ -39,6 +40,7 @@ export const AdminNavigation = () => {
       <Route path="/viewtournament" element={<ViewTournament />}></Route>
       <Route path="/addtournament" element={<AddTournament />}></Route>
       <Route path="/edittournament" element={<EditTournament />}></Route>
+      <Route path="/viewfeedback" element={<ViewFeedback/>}></Route>
     </Routes>
   );
 };

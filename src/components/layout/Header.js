@@ -12,12 +12,12 @@ function Header() {
             <i className="fa fa-user-edit"></i>
           </h2>
         </a>
-        <a href="#" className="sidebar-toggler flex-shrink-0">
+      {/*   <a href="#" className="sidebar-toggler flex-shrink-0">
           <i className="fa fa-bars"></i>
-        </a>
+        </a> */}
 
         <div className="navbar-nav align-items-center ms-auto">
-          <div className="nav-item dropdown">
+          <div className="nav-item dropdown ">
             <a
               href="#"
               className="nav-link dropdown-toggle"
