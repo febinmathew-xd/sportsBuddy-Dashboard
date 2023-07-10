@@ -14,9 +14,16 @@ function ViewFeedback() {
        
         Post("getfeedbacks", {tablename:"feedback"}).then((data) => {
             setFeedback(data);
+            console.log(data);
         })
        
     }, [refresh]);
+
+    const deleteFeedback = (id) => {
+        Post("delete", { tablename: "feedback", id: id }).then((data) => {
+          setRefresh((prev) => prev + 1);
+        });
+      };
 
 
 
@@ -57,16 +64,10 @@ function ViewFeedback() {
                           <td>{value.address}</td>
                           <td>{value.feedback}</td>
                           <td>
-                            <Link
-                              /* state={{ id: value.loginid }} */
-                              className="btn btn-success"
-                              to="/editdistributor"
-                            >
-                              Reply
-                            </Link>
-                            &nbsp;&nbsp;
+                            
+                           
                             <button
-                              
+                              onClick={() => deleteFeedback(value.fid)}
                               className="btn btn-danger"
                             >
                               Delete
