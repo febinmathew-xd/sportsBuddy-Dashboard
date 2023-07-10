@@ -2,15 +2,25 @@ import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import Sidebar from '../layout/Sidebar'
 import Header from '../layout/Header'
+import { Post } from '../../service/Api';
 
 
 function ViewFeedback() {
 
     const [feedback, setFeedback] = useState([]);
+    const [refresh, setRefresh] = useState(0);
+
+    useEffect( ( )=> {
+       
+        Post("getfeedbacks", {tablename:"feedback"}).then((data) => {
+            setFeedback(data);
+        })
+       
+    }, [refresh]);
 
 
 
-  return (
+  return ( 
     <>
     <Sidebar />
       <div className="content">
@@ -21,7 +31,7 @@ function ViewFeedback() {
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Distributor Table</h6>
-                <Link to="/adddistributor" className=" border text-black font-extrabold text-center px-2 py-2 rounded text-sm bg-lime-400 z-10 ">Add new</Link>
+                
               </div>
               <div class="table-responsive">
                 <table class="table">
@@ -31,25 +41,28 @@ function ViewFeedback() {
                       <th scope="col">Name</th>
                       <th scope="col">Contact</th>
                       <th scope="col">Address</th>
-                      <th scope="col">Description</th>
-                      {/* <th scope="col">Action</th> */}
+                      <th scope="col">Feedback</th>
+                      <th scope="col">Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>username</td>
-                          <td>contact</td>
-                          <td>address</td>
-                          <td>description</td>
-                          {/* <td>
+
+                    {
+                        feedback?.map((value, index) => {
+                            return (
+                          <tr key={index}>
+                          <th scope="row">{index +1}</th>
+                          <td>{value.username}</td>
+                          <td>{value.contact}</td>
+                          <td>{value.address}</td>
+                          <td>{value.feedback}</td>
+                          <td>
                             <Link
-                              state={{ id: value.loginid }}
+                              /* state={{ id: value.loginid }} */
                               className="btn btn-success"
                               to="/editdistributor"
                             >
-                              Edit
+                              Reply
                             </Link>
                             &nbsp;&nbsp;
                             <button
@@ -58,8 +71,13 @@ function ViewFeedback() {
                             >
                               Delete
                             </button>
-                          </td> */}
+                          </td>
                         </tr>
+                            )
+                        })
+                    }
+                    
+                       
                       
                   </tbody>
                 </table>
