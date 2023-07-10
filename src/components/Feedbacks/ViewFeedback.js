@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Header from "../Header";
-import Sidebar from "../Sidebar";
-import { Link } from "react-router-dom";
-import { Post } from "../../../service/Api";
+import React, { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom';
+import Sidebar from '../layout/Sidebar'
+import Header from '../layout/Header'
 
-function ViewDistributor() {
-  const [distributor, setDistributor] = useState([]);
-  const [refresh, setRefresh] = useState(0);
-  useEffect(() => {
-    Post("getall", { tablename: "distributor" }).then((data) => {
-      setDistributor(data);
-    });
-  }, [refresh]);
 
-  const deleteDistributor = (id) => {
-    Post("deleteuser", { tablename: "distributor", id: id }).then((data) => {
-      setRefresh((prev) => prev + 1);
-    });
-  };
+function ViewFeedback() {
+
+    const [feedback, setFeedback] = useState([]);
+
+
+
   return (
     <>
-      <Sidebar />
+    <Sidebar />
       <div className="content">
         <Header />
 
@@ -40,19 +32,18 @@ function ViewDistributor() {
                       <th scope="col">Contact</th>
                       <th scope="col">Address</th>
                       <th scope="col">Description</th>
-                      <th scope="col">Action</th>
+                      {/* <th scope="col">Action</th> */}
                     </tr>
                   </thead>
                   <tbody>
-                    {distributor.map((value, index) => {
-                      return (
+                    
                         <tr>
-                          <th scope="row">{index + 1}</th>
-                          <td>{value.username}</td>
-                          <td>{value.contact}</td>
-                          <td>{value.address}</td>
-                          <td>{value.description}</td>
-                          <td>
+                          <th scope="row">1</th>
+                          <td>username</td>
+                          <td>contact</td>
+                          <td>address</td>
+                          <td>description</td>
+                          {/* <td>
                             <Link
                               state={{ id: value.loginid }}
                               className="btn btn-success"
@@ -62,15 +53,14 @@ function ViewDistributor() {
                             </Link>
                             &nbsp;&nbsp;
                             <button
-                              onClick={() => deleteDistributor(value.loginid)}
+                              
                               className="btn btn-danger"
                             >
                               Delete
                             </button>
-                          </td>
+                          </td> */}
                         </tr>
-                      );
-                    })}
+                      
                   </tbody>
                 </table>
               </div>
@@ -78,7 +68,9 @@ function ViewDistributor() {
           </div>
         </div>
       </div>
+
     </>
-  );
+  )
 }
-export default ViewDistributor;
+
+export default ViewFeedback

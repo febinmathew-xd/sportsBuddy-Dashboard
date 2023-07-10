@@ -46,7 +46,7 @@ function ViewTournament() {
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Tournaments</h6>
                 {isAuthenticated == "turf" ? (
-                  <Link to="/addtournament">Add new</Link>
+                  <Link to="/addtournament" className="text-white">Add new</Link>
                 ) : (
                   ""
                 )}

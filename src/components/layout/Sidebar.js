@@ -20,7 +20,7 @@ function Sidebar() {
                 alt=""
                 style={{ width: "40px", height: "40px" }}
               />
-              <div className="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+              <div className="bg-success rounded-circle  border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div className="ms-3">
               <h6 className="mb-0">Diya Ponnachan</h6>
@@ -59,6 +59,16 @@ function Sidebar() {
                   className="nav-item nav-link"
                 >
                   <i className="fa fa-th me-2"></i>Tournament
+                </NavLink>
+
+              {/* FEEDBACK SIDEBAR  */}
+
+                <NavLink
+                  activeclassname="active"
+                  to="/viewfeedback"
+                  className="nav-item nav-link"
+                >
+                  <i className="fa fa-th me-2"></i>Feedback
                 </NavLink>
               </>
             ) : isAuthenticated == "turf" ? (
