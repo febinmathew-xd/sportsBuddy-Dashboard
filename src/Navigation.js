@@ -23,6 +23,8 @@ import EditProducts from "./components/layout/Products/EditProducts";
 import Orders from "./components/layout/Orders";
 import TurfBooking from "./components/layout/TurfBooking";
 import ViewFeedback from "./components/Feedbacks/ViewFeedback";
+import ViewComplaints from "./components/layout/Complaints/ViewComplaints";
+import ReplyComplaint from "./components/layout/Complaints/ReplyComplaint";
 
 export const AdminNavigation = () => {
   return (
@@ -41,6 +43,8 @@ export const AdminNavigation = () => {
       <Route path="/addtournament" element={<AddTournament />}></Route>
       <Route path="/edittournament" element={<EditTournament />}></Route>
       <Route path="/viewfeedback" element={<ViewFeedback/>}></Route>
+      <Route path="/viewcomplaints" element={<ViewComplaints/>}></Route>
+      <Route path="/replycomplaint" element={<ReplyComplaint/>}></Route>
     </Routes>
   );
 };

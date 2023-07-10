@@ -70,6 +70,16 @@ function Sidebar() {
                 >
                   <i className="fa fa-th me-2"></i>Feedback
                 </NavLink>
+             
+              {/* COMPLAINTS */}
+
+                <NavLink
+                  activeclassname="active"
+                  to="/viewcomplaints"
+                  className="nav-item nav-link"
+                >
+                  <i className="fa fa-th me-2"></i>Complaints
+                </NavLink>
               </>
             ) : isAuthenticated == "turf" ? (
               <>
