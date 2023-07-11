@@ -48,6 +48,7 @@ function ViewFeedback() {
                       <th scope="col">Name</th>
                       <th scope="col">Contact</th>
                       <th scope="col">Address</th>
+                      <th scope="col">Title</th>
                       <th scope="col">Feedback</th>
                       <th scope="col">Action</th>
                     </tr>
@@ -62,6 +63,7 @@ function ViewFeedback() {
                           <td>{value.username}</td>
                           <td>{value.contact}</td>
                           <td>{value.address}</td>
+                          <td>{value.title}</td>
                           <td>{value.feedback}</td>
                           <td>
                             

@@ -48,6 +48,8 @@ function ViewComplaints() {
                       <th scope="col">Name</th>
                       <th scope="col">Contact</th>
                       <th scope="col">Address</th>
+                      <th scope="col">Turf Name</th>
+                      <th scope="col">Title</th>
                       <th scope="col">Complaints</th>
                       <th scope="col">Action</th>
                     </tr>
@@ -62,6 +64,8 @@ function ViewComplaints() {
                           <td>{complaint.username}</td>
                           <td>{complaint.contact}</td>
                           <td>{complaint.address}</td>
+                          <td>{complaint.turfname}</td>
+                          <td>{complaint.title}</td>
                           <td>{complaint.complaint}</td>
                           <td>
                             <Link 
