@@ -25,6 +25,7 @@ import TurfBooking from "./components/layout/TurfBooking";
 import ViewFeedback from "./components/Feedbacks/ViewFeedback";
 import ViewComplaints from "./components/layout/Complaints/ViewComplaints";
 import ReplyComplaint from "./components/layout/Complaints/ReplyComplaint";
+import Ticketbookings from "./components/Ticketbookings";
 
 export const AdminNavigation = () => {
   return (
@@ -56,6 +57,7 @@ export const TurfNavigation = () => {
       <Route path="/addtournament" element={<AddTournament />}></Route>
       <Route path="/edittournament" element={<EditTournament />}></Route>
       <Route path="/booking" element={<TurfBooking />}></Route>
+      <Route path="/ticketbookings" element={<Ticketbookings/>}></Route>
     </Routes>
   );
 };
