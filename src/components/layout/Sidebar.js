@@ -95,7 +95,14 @@ function Sidebar() {
                   to="/booking"
                   className="nav-item nav-link"
                 >
-                  <i className="fa fa-th me-2"></i>Booking
+                  <i className="fa fa-th me-2"></i>Turf Bookings
+                </NavLink>
+                <NavLink
+                  activeclassname="active"
+                  to="/ticketbookings"
+                  className="nav-item nav-link"
+                >
+                  <i className="fa fa-th me-2"></i>Ticket Bookings
                 </NavLink>
               </>
             ) : isAuthenticated == "distributor" ? (

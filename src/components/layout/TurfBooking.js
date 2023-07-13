@@ -38,7 +38,7 @@ function TurfBooking() {
           <div class="col-12">
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
-                <h6 class="mb-4">Products Table</h6>
+                <h6 class="mb-4">Turf Booking Details</h6>
                 <Link to="/addproducts">Add new</Link>
               </div>
               <div class="table-responsive">
