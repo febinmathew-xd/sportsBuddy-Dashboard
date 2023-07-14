@@ -39,7 +39,7 @@ function Ticketbookings() {
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Tournament</th>
-                      <th scope="col">User Name</th>
+                      <th scope="col">Username</th>
                       <th scope="col">Contact</th>
                       <th scope="col">Tickets</th>
                       <th scope="col">Total Amount</th>
@@ -57,9 +57,9 @@ function Ticketbookings() {
                           <td>{value.username}</td>
                           <td>{value.contact}</td>
                           <td>{value.ticketcount}</td>
-                          <td>{value.amount}</td>
+                          <td>₹ {value.amount}</td>
                           <td>{value.bookeddate}</td>
-                          <td>
+                          <td style={{color:"green", fontWeight:"700"}}>
                             Confirmed
                           </td>
 

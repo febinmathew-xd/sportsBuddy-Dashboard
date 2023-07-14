@@ -80,7 +80,19 @@ function Sidebar() {
                 >
                   <i className="fa fa-th me-2"></i>Complaints
                 </NavLink>
+                <NavLink
+                  activeclassname="active"
+                  to="/news"
+                  className="nav-item nav-link"
+                >
+                  <i className="fa fa-th me-2"></i>News
+                </NavLink>
               </>
+
+            /* TURF */
+
+
+
             ) : isAuthenticated == "turf" ? (
               <>
                 <NavLink
@@ -104,6 +116,8 @@ function Sidebar() {
                 >
                   <i className="fa fa-th me-2"></i>Ticket Bookings
                 </NavLink>
+
+                
               </>
             ) : isAuthenticated == "distributor" ? (
               <>
