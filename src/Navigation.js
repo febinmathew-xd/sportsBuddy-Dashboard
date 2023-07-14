@@ -26,6 +26,8 @@ import ViewFeedback from "./components/Feedbacks/ViewFeedback";
 import ViewComplaints from "./components/layout/Complaints/ViewComplaints";
 import ReplyComplaint from "./components/layout/Complaints/ReplyComplaint";
 import Ticketbookings from "./components/Ticketbookings";
+import News from "./components/layout/Complaints/News";
+import AddNews from "./components/AddNews";
 
 export const AdminNavigation = () => {
   return (
@@ -46,6 +48,8 @@ export const AdminNavigation = () => {
       <Route path="/viewfeedback" element={<ViewFeedback/>}></Route>
       <Route path="/viewcomplaints" element={<ViewComplaints/>}></Route>
       <Route path="/replycomplaint" element={<ReplyComplaint/>}></Route>
+      <Route path="/news" element={<News/>}></Route>
+      <Route path="/addnews" element={<AddNews/>}></Route>
     </Routes>
   );
 };

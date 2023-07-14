@@ -1,4 +1,5 @@
 let url = "http://127.0.0.1:8000/api/";
+export const fileurl = "http://127.0.0.1:8000/public/img/";
 
 export const Post = async (path, param) => {
   let data = await fetch(`${url}${path}`, {
