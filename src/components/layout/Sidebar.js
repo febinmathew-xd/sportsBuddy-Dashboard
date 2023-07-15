@@ -10,13 +10,13 @@ function Sidebar() {
       <div className="sidebar pe-4 pb-3">
         <nav className="navbar bg-secondary navbar-dark">
           <a href="index.html" className="navbar-brand mx-4 mb-3">
-            <h3 className="text-primary"> Sports Buddy</h3>
+            <h3 className="text-primary"> <span style={{color:"#dc2626"}}>Sports</span>  Buddy</h3>
           </a>
           <div className="d-flex align-items-center ms-4 mb-4">
             <div className="position-relative">
               <img
                 className="rounded-circle"
-                src="img/user.jpg"
+                src="img/user.png"
                 alt=""
                 style={{ width: "40px", height: "40px" }}
               />
@@ -24,7 +24,7 @@ function Sidebar() {
             </div>
             <div className="ms-3">
               <h6 className="mb-0">Diya Ponnachan</h6>
-              <span>Admin</span>
+              <span >Admin</span>
             </div>
           </div>
           <div className="navbar-nav w-100">

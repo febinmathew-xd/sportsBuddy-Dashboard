@@ -25,7 +25,7 @@ function Header() {
             >
               <img
                 className="rounded-circle me-lg-2"
-                src="img/user.jpg"
+                src="img/user.png"
                 alt=""
                 style={{ width: "40px", height: "40px" }}
               />
