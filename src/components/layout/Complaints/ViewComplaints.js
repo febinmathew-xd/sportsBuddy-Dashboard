@@ -37,7 +37,7 @@ function ViewComplaints() {
           <div class="col-12">
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
-                <h6 class="mb-4">Distributor Table</h6>
+                <h6 class="mb-4">Complaint Table</h6>
                 
               </div>
               <div class="table-responsive">
@@ -49,8 +49,8 @@ function ViewComplaints() {
                       <th scope="col">Contact</th>
                       <th scope="col">Address</th>
                       <th scope="col">Turf Name</th>
-                      <th scope="col">Title</th>
-                      <th scope="col">Complaints</th>
+                      <th scope="col">Complaint</th>
+                      <th scope="col">Reply</th>
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
@@ -65,15 +65,18 @@ function ViewComplaints() {
                           <td>{complaint.contact}</td>
                           <td>{complaint.address}</td>
                           <td>{complaint.turfname}</td>
-                          <td>{complaint.title}</td>
-                          <td>{complaint.complaint}</td>
+                          <td> <p style={{fontWeight:'bold', fontSize:'14px'}}>{complaint.title}</p> <p style={{fontSize:'14px', opacity:'0.7'}}>{complaint.complaint}</p>  </td>
+                          <td><p style={{fontWeight:'bold', fontSize:'14px'}}>{complaint?.replytitle}</p> <p style={{fontSize:'14px', opacity:'0.7'}}>{complaint?.reply}</p></td>
                           <td>
-                            <Link 
+
+                            {!complaint.reply &&  <Link 
                            state={{complaintid:complaint.complaintid}}
                             className="btn btn-success mx-2"
                             to='/replycomplaint'>
                                   Reply
                             </Link>
+                            }
+                           
                            
                             <button
                               onClick={() => deleteComplaint(complaint.complaintid)}

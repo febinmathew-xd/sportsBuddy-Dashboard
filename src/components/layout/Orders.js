@@ -38,8 +38,11 @@ function Orders() {
           <div class="col-12">
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
-                <h6 class="mb-4">Products Table</h6>
-                <Link to="/addproducts">Add new</Link>
+                <h6 class="mb-4">Order Table</h6>
+                <div style={{display:'flex', alignItems:'center'}}>
+
+                <Link style={addButton} to="/addproducts">Add Orders</Link>
+                </div>
               </div>
               <div class="table-responsive">
                 <table class="table">
@@ -123,4 +126,13 @@ function Orders() {
     </>
   );
 }
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
+
 export default Orders;

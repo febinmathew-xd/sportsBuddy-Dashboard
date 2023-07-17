@@ -39,7 +39,10 @@ function TurfBooking() {
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Turf Booking Details</h6>
-                <Link to="/addproducts">Add new</Link>
+               {/*  <div style={{display:'flex', alignItems:'center'}}>
+                <Link style={addButton}  to="/addproducts">Add new</Link>
+
+                </div> */}
               </div>
               <div class="table-responsive">
                 <table class="table">
@@ -83,7 +86,7 @@ function TurfBooking() {
                             {value.status == 0 ? (
                               <button
                                 onClick={() => changeStatus(value.bookingid, 1)}
-                                className="btn btn-danger"
+                                className="btn btn-success"
                               >
                                 Accept
                               </button>
@@ -123,4 +126,13 @@ function TurfBooking() {
     </>
   );
 }
+
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
 export default TurfBooking;
