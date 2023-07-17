@@ -29,7 +29,10 @@ function ViewTurf() {
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Turf Table</h6>
-                <Link to="/addturf">Add new</Link>
+                <div style={{display:'flex', alignItems:'center'}}>
+
+                <Link style={addButton} to="/addturf">Add Turf</Link>
+                </div>
               </div>
               <div class="table-responsive">
                 <table class="table">
@@ -81,4 +84,13 @@ function ViewTurf() {
     </>
   );
 }
+
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
 export default ViewTurf;

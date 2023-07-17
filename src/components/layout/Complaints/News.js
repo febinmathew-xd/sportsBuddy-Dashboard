@@ -47,7 +47,10 @@ function News() {
             <div className="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
                 <h6 className="mb-4">News</h6>
-                <Link className="mb-4" style={{color:"white"}}  to="/addnews">Add new</Link>
+                <div style={{display:'flex', alignItems:'center'}}>
+
+                <Link className="mb-4" style={addButton}  to="/addnews">Add News</Link>
+                </div>
                 
               </div>
               <div className="table-responsive">
@@ -102,5 +105,14 @@ function News() {
    </>
   )
 }
+
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
 
 export default News

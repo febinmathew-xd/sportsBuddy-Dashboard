@@ -46,7 +46,10 @@ function ViewTournament() {
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Tournaments</h6>
                 {isAuthenticated == "turf" ? (
-                  <Link to="/addtournament" className="text-white">Add new</Link>
+                  <div style={{display:'flex', alignItems:'center'}}>
+                    <Link style={addButton} to="/addtournament" className="text-white">Add Tournament</Link>
+
+                  </div>
                 ) : (
                   ""
                 )}
@@ -105,4 +108,13 @@ function ViewTournament() {
     </>
   );
 }
+
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
 export default ViewTournament;

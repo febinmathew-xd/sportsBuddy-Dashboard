@@ -29,7 +29,10 @@ function ViewDistributor() {
             <div class="bg-secondary rounded h-100 p-4">
               <div className="d-flex justify-content-between">
                 <h6 class="mb-4">Distributor Table</h6>
-                <Link to="/adddistributor" className=" border text-black font-extrabold text-center px-2 py-2 rounded text-sm bg-lime-400 z-10 ">Add new</Link>
+                <div style={{display:'flex', alignItems:'center'}}>
+                <Link style={addButton} to="/adddistributor" className="  ">Add Distributor</Link>
+
+                </div>
               </div>
               <div class="table-responsive">
                 <table class="table">
@@ -81,4 +84,13 @@ function ViewDistributor() {
     </>
   );
 }
+
+const addButton = {
+  color:'white',
+   backgroundColor:'#dc2626',
+   borderRadius: '8px',
+   padding: '8px 20px',
+   fontSize: '14px',
+   fontWeight: '700'
+};
 export default ViewDistributor;
